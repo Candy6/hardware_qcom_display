@@ -874,9 +874,6 @@ int hwc_getDisplayAttributes(struct hwc_composer_device_1* dev, int disp,
         case HWC_DISPLAY_DPI_Y:
             values[i] = (int32_t) (ctx->dpyAttr[disp].ydpi*1000.0);
             break;
-        case HWC_DISPLAY_COLOR_TRANSFORM:
-            values[i] = ctx->mColorMode->getModeForIndex(config);
-            break;
         default:
             ALOGE("Unknown display attribute %d",
                     attributes[i]);
